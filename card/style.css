@@ -1,0 +1,134 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+.card {
+    width: 300px;
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    background-color: #fff;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+
+ul.list-unstyled {
+    margin-top: 15px;
+}
+
+ul.list-unstyled li {
+    margin-bottom: 12px;
+}
+
+ul.list-unstyled i {
+    margin-right: 10px;
+}
+
+ul.list-unstyled a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+ul.list-unstyled a:hover {
+    color: #007bff;
+}
+
+.card-img-top {
+    max-height: calc(100% - 100px);
+    width: auto;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background-color: #ddd;
+    border-radius: 34px;
+    transition: background-color 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "🌑";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.4s;
+}
+
+input:checked+.slider {
+    background-color: #2c3033;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+    background-color: white;
+    content: "☀️";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.toggle-switch-container {
+    margin-bottom: 10px;
+    margin-right: 50px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+    animation: typing 3s steps(50) forwards;
+}
+
+#typing-title {
+    white-space: nowrap;
+}
+
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
